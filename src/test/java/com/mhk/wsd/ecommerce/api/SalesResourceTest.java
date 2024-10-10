@@ -1,6 +1,5 @@
-package com.mhk.wsd.ecommerce.controller;
+package com.mhk.wsd.ecommerce.api;
 
-import com.mhk.wsd.ecommerce.api.SalesResource;
 import com.mhk.wsd.ecommerce.service.SalesServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,7 +39,7 @@ public class SalesResourceTest {
     public void testGetTotalSaleAmountForToday() throws Exception {
         when(salesService.getTotalSaleAmountForToday()).thenReturn(100L);
 
-        mockMvc.perform(get("/api/sales/total-today"))
+        mockMvc.perform(get("/api/v1/sales/total-today"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", is(100)));
 
@@ -59,7 +58,7 @@ public class SalesResourceTest {
 
         when(salesService.getMaxSaleDayWithinRange(startDate, endDate)).thenReturn(result);
 
-        mockMvc.perform(get("/api/sales/max-sale-day")
+        mockMvc.perform(get("/api/v1/sales/max-sale-day")
                         .param("startDate", "2023-05-01")
                         .param("endDate", "2023-05-31"))
                 .andExpect(status().isOk())
@@ -81,7 +80,7 @@ public class SalesResourceTest {
 
         when(salesService.getTopFiveSellingItems()).thenReturn(topSellingItems);
 
-        mockMvc.perform(get("/api/sales/top-five-selling-items"))
+        mockMvc.perform(get("/api/v1/sales/top-five-selling-items"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].productName", is("Product1")))
                 .andExpect(jsonPath("$[0].totalSale", is(100)))
@@ -109,7 +108,7 @@ public class SalesResourceTest {
 
         when(salesService.getTopFiveSellingItemsLastMonth()).thenReturn(topSellingItems);
 
-        mockMvc.perform(get("/api/sales/top-five-selling-items-last-month"))
+        mockMvc.perform(get("/api/v1/sales/top-five-selling-items-last-month"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].productName", is("Product1")))
                 .andExpect(jsonPath("$[0].totalQuantity", is(100)))

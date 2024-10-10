@@ -1,6 +1,5 @@
-package com.mhk.wsd.ecommerce.controller;
+package com.mhk.wsd.ecommerce.api;
 
-import com.mhk.wsd.ecommerce.api.WishListResource;
 import com.mhk.wsd.ecommerce.domain.entity.Customer;
 import com.mhk.wsd.ecommerce.domain.entity.WishList;
 import com.mhk.wsd.ecommerce.service.CustomerServiceImpl;
@@ -65,7 +64,7 @@ public class WishListResourceTest {
         when(wishListService.getWishListByCustomer(customer)).thenReturn(wishList);
 
         // Perform the GET request and verify the response
-        mockMvc.perform(get("/api/wishlist/{customerUsername}", customerUsername))
+        mockMvc.perform(get("/api/v1/wishlist/{customerUsername}", customerUsername))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(1)))

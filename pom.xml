@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.mhk.wsd</groupId>
 	<artifactId>mhk-wsd-e-commerce-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>mhk-wsd-e-commerce-service</name>
 	<description>Coding Challenge Wall Street Docs</description>
 	<url/>
