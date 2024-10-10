@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class WishListService {
+public class WishListServiceImpl {
 
     private final WishListRepository wishListRepository;
 

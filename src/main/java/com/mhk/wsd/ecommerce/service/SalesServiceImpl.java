@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class SalesService {
-    private static final Logger logger = LogManager.getLogger(SalesService.class);
+public class SalesServiceImpl implements ISalesService{
+    private static final Logger logger = LogManager.getLogger(SalesServiceImpl.class);
 
     private final SalesRepository salesRepository;
 
