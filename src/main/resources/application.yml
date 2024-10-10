@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: mhk-wsd-e-commerce-service
+  lifecycle:
+    timeout-per-shutdown-phase: "90s"
+  jpa:
+    database-platform: postgres
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
