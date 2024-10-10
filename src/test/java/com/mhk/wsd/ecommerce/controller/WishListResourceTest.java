@@ -3,7 +3,7 @@ package com.mhk.wsd.ecommerce.controller;
 import com.mhk.wsd.ecommerce.api.WishListResource;
 import com.mhk.wsd.ecommerce.domain.entity.Customer;
 import com.mhk.wsd.ecommerce.domain.entity.WishList;
-import com.mhk.wsd.ecommerce.service.CustomerService;
+import com.mhk.wsd.ecommerce.service.CustomerServiceImpl;
 import com.mhk.wsd.ecommerce.service.WishListServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class WishListResourceTest {
     private WishListServiceImpl wishListService;
 
     @Mock
-    private CustomerService customerService;
+    private CustomerServiceImpl customerService;
 
     @InjectMocks
     private WishListResource wishListResource;

@@ -21,7 +21,7 @@ public class CustomerServiceTest {
     private CustomerRepository customerRepository;
 
     @InjectMocks
-    private CustomerService customerService;
+    private CustomerServiceImpl customerService;
 
     private Customer customer;
 
