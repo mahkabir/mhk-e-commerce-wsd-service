@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+        <Socket name="Logstash" host="logstash" port="5044">
+            <LogstashLayout />
+        </Socket>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Logstash"/>
+        </Root>
+        <Logger name="com.mhk.wsd.ecommerce" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Logstash"/>
+        </Logger>
+    </Loggers>
+</Configuration>
