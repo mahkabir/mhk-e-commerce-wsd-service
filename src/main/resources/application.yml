@@ -17,3 +17,9 @@ spring:
     init:
       mode: always
       continue-on-error: true
+
+info:
+  app:
+    name: Ecommerce service
+    description: This service is responsible for ecommerce operations.
+    version: 1.0

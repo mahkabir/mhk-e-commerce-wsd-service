@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecommerce_wsd
+    url: jdbc:postgresql://postgresqldb:5432/ecommerce_wsd
     username: postgres
     password: root
     hikari:
