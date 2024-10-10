@@ -1,4 +1,5 @@
 package com.mhk.wsd.ecommerce.service;
 
-public interface IWishListService {
+public interface IWishListServiceTest {
+
 }
