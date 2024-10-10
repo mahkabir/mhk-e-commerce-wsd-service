@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgresqldb:5432/ecommerce_wsd
+    url: jdbc:postgresql://localhost:5432/ecommerce_wsd
     username: postgres
     password: root
     hikari:
@@ -16,3 +16,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  flyway:
+    enabled: ${FLYWAY_ENABLED:false}  # Use environment variable to control Flyway
+    url: jdbc:postgresql://postgresqldb:5432/ecommerce_wsd
+    user: postgres
+    password: root
+    baselineOnMigrate: true
+    locations: classpath:db/migration
