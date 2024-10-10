@@ -17,8 +17,8 @@ spring:
     hibernate:
       ddl-auto: update
   flyway:
-    enabled: ${FLYWAY_ENABLED:false}  # Use environment variable to control Flyway
-    url: jdbc:postgresql://postgresqldb:5432/ecommerce_wsd
+    enabled: ${FLYWAY_ENABLED:false}
+    url: jdbc:postgresql://localhost:5432/ecommerce_wsd
     user: postgres
     password: root
     baselineOnMigrate: true
